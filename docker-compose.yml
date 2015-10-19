@@ -1,7 +1,9 @@
 web:
   image: romant/todos
   ports:
-    - "80:80"
+    - "80:3000"
+  environment:
+    - MONGO_URL=mongodb://db:27017/meteor
   links:
     - db
 db:
